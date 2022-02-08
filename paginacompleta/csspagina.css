@@ -152,26 +152,31 @@ h2{
 }
 #footer{
     background-color: rgb(247, 247, 247);
-    height: 770px;
 }
-#direcciones{
-    width: 100%;
-    height: 100%;
+#listasfooter {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
 }
 .lista{
-    display: inline-block;
-    width: 18%;
+    width: 100%;
     padding: 3px;
     border-radius: 15px;
     margin:40px;
     text-align: left;
     vertical-align: top;  
 }
+.lista ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 .lista li{
     margin-top: 25px;
     list-style: none;
 }
-.lista a{
+#footer a{
     text-decoration:none;
     color: black;
 }
@@ -216,8 +221,9 @@ h2{
 .imagenes a:hover{
     text-decoration: underline;
 }
-.lista a:hover{
+#footer a:hover{
     text-decoration: underline;
+    background-color: rgb(90, 90, 90,0.15);
 }
 #logo:hover {
     background-color: rgba(174, 174, 174, 0.15);
@@ -236,19 +242,11 @@ h2{
         display: inline-block;
         height: 100%;
         width: 35%;
-        border-radius: 15px;
         margin:50px;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: top;
-        background-color: rgb(255, 255, 255);
-        border-style: solid;
-        border-color: rgb(236, 236, 236);
     }
     .fechas img{
         width: 100%;
         height: 80%;
-        border-radius: 12px;
     }
     
 }
@@ -281,17 +279,10 @@ h2{
     #tarjetas{
         height: 100%;
         width: 100%;
-        background-color: rgba(231, 231, 231, 0.9);
-        padding-top: 24px;
-        padding-bottom: 20px;
-        border-radius: 15px;
+        
     }
     .recuadro  {
         display: inline-block;
-        vertical-align: top;
-        padding:15px;
-        margin: 13px;
-        background-color: rgb(255, 255, 255);
         width: 90%;
         height: 220px;
         
@@ -303,29 +294,32 @@ h2{
     .fechas{
         display: inline-block;
         height: 100%;
-        width: 100%;
-        border-radius: 15px;
+        width: 90%;
+       
         margin:50px;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: top;
-        background-color: rgb(255, 255, 255);
-        border-style: solid;
-        border-color: rgb(236, 236, 236);
+        
     }
     .fechas img{
         width: 100%;
         height: 100%;
         border-radius: 12px;
     }
-    #direciones{
-        display: flex;
+    footer {
+        background-color: gray;
+        padding: 24px;
+    }
+    
+    #listasfooter {
         flex-direction: column;
     }
-    .lista ul{
-        display: flex;
+    .lista ul {
         flex-direction: row;
-        margin: 8px;
-        padding: 10px;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 400px) {
+    .lista ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 }
